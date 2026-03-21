@@ -1,2 +1,2 @@
-# Hephaestus's Anvil
+# Forge of Hephaestus
 Game for arcade march gamejam
