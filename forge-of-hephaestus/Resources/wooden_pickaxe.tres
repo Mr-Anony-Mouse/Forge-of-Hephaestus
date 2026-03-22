@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://i253mbmy37h4"]
+
+[ext_resource type="Texture2D" uid="uid://bcfmwft0lnfk7" path="res://Assets/handle_wood.png" id="1_3jib6"]
+[ext_resource type="Texture2D" uid="uid://twbim572ehgb" path="res://Assets/pick_head_wood.png" id="2_3jib6"]
+[ext_resource type="Script" uid="uid://i6mexmasr754" path="res://Resources/item_data.gd" id="3_yf3u0"]
+
+[resource]
+script = ExtResource("3_yf3u0")
+item_name = "Wooden Pickaxe"
+is_tool = true
+head_texture = ExtResource("2_3jib6")
+handle_texture = ExtResource("1_3jib6")
+req_pickaxe_head = "Wooden Pickaxe Head"
+req_handle_slot = "Wooden Handle"
+durability = 50.0
+efficiency = 10.0
+metadata/_custom_type_script = "uid://i6mexmasr754"

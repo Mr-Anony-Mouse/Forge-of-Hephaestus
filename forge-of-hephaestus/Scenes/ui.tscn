@@ -1,0 +1,1141 @@
+[gd_scene format=3 uid="uid://cjsm2pasd2jqy"]
+
+[ext_resource type="Script" uid="uid://dv0qplym3ul0d" path="res://Scripts/ui.gd" id="1_2246s"]
+[ext_resource type="Texture2D" uid="uid://dbmb6qt2d8n3k" path="res://Assets/H_Crafting.png" id="1_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://nwsis0cw6ugx" path="res://Assets/H_Slot.png" id="2_2246s"]
+[ext_resource type="Script" uid="uid://i6mexmasr754" path="res://Resources/item_data.gd" id="2_mmixe"]
+[ext_resource type="Resource" uid="uid://bmoaf7rem13is" path="res://Resources/axe_head_wood.tres" id="3_nt8jn"]
+[ext_resource type="Texture2D" uid="uid://df1ktnbwmet0n" path="res://Assets/H_Slot_empty.png" id="3_q7pk6"]
+[ext_resource type="Resource" uid="uid://deimot10u8ud6" path="res://Resources/handle_wood.tres" id="4_g0wmg"]
+[ext_resource type="Resource" uid="uid://b8fnrwk3qpmln" path="res://Resources/wooden_axe.tres" id="5_4vbiv"]
+[ext_resource type="Resource" uid="uid://7bwqklk3ju1d" path="res://Resources/pickaxe_head_wood.tres" id="5_nt8jn"]
+[ext_resource type="Resource" uid="uid://i253mbmy37h4" path="res://Resources/wooden_pickaxe.tres" id="7_g0wmg"]
+[ext_resource type="Resource" uid="uid://qycias4ox7sf" path="res://Resources/empty_slot.tres" id="8_g0wmg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oyw2r"]
+texture = ExtResource("1_nf4gj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pkca"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="UI" type="Control" unique_id=192568256]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2246s")
+all_recipes = Array[ExtResource("2_mmixe")]([ExtResource("3_nt8jn"), ExtResource("4_g0wmg"), ExtResource("5_nt8jn"), ExtResource("5_4vbiv"), ExtResource("7_g0wmg")])
+empty_item = ExtResource("8_g0wmg")
+
+[node name="Crafting_Panel" type="Panel" parent="." unique_id=1637699645]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -197.0
+offset_right = 197.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_oyw2r")
+
+[node name="Slot_Axe_Head" type="TextureRect" parent="Crafting_Panel" unique_id=1734074220]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.101
+anchor_top = 0.16600001
+anchor_right = 0.21100001
+anchor_bottom = 0.275
+offset_left = 0.17251968
+offset_top = 0.0041503906
+offset_right = -0.14770508
+offset_bottom = 0.077926636
+texture = ExtResource("2_2246s")
+
+[node name="Slot_Axe_Head_Btn" type="Button" parent="Crafting_Panel/Slot_Axe_Head" unique_id=1572566411]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -18.5
+offset_right = 18.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Slot_Axe_Head/Slot_Axe_Head_Btn" unique_id=170034982]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Slot_Axe_Head/Slot_Axe_Head_Btn" unique_id=302421622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Slot_Axe_Head/Slot_Axe_Head_Btn" unique_id=1034233187]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 1.2650001
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 63.061543
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Slot_Pickaxe_Head" type="TextureRect" parent="Crafting_Panel" unique_id=778027228]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25100002
+anchor_top = 0.16600001
+anchor_right = 0.36
+anchor_bottom = 0.275
+offset_left = 0.08567047
+offset_top = 0.0041503906
+offset_right = 0.15943909
+offset_bottom = 0.077926636
+texture = ExtResource("2_2246s")
+
+[node name="Slot_Pickaxe_Head_Btn" type="Button" parent="Crafting_Panel/Slot_Pickaxe_Head" unique_id=1587236007]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -18.5
+offset_right = 18.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Slot_Pickaxe_Head/Slot_Pickaxe_Head_Btn" unique_id=1262149179]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Slot_Pickaxe_Head/Slot_Pickaxe_Head_Btn" unique_id=450422235]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Slot_Pickaxe_Head/Slot_Pickaxe_Head_Btn" unique_id=323044520]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 1.2650001
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 1.9619408
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Slot_Handle" type="TextureRect" parent="Crafting_Panel" unique_id=1193375010]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18300001
+anchor_top = 0.31100002
+anchor_right = 0.293
+anchor_bottom = 0.42000002
+offset_left = 0.19346619
+offset_top = -0.16530609
+offset_right = -0.12675476
+offset_bottom = -0.091537476
+texture = ExtResource("2_2246s")
+
+[node name="Slot_Handle_Btn" type="Button" parent="Crafting_Panel/Slot_Handle" unique_id=335087154]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -18.5
+offset_right = 18.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Slot_Handle/Slot_Handle_Btn" unique_id=2008937349]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Slot_Handle/Slot_Handle_Btn" unique_id=2122987789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Slot_Handle/Slot_Handle_Btn" unique_id=2082953073]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 1.2650001
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 1.9619408
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Slot_Res" type="TextureRect" parent="Crafting_Panel" unique_id=83398891]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.708
+anchor_top = 0.238
+anchor_right = 0.81700003
+anchor_bottom = 0.347
+offset_left = 0.015777588
+offset_top = -0.14015198
+offset_right = 0.089538574
+offset_bottom = -0.06637573
+texture = ExtResource("2_2246s")
+
+[node name="Slot_Res_Btn" type="Button" parent="Crafting_Panel/Slot_Res" unique_id=389085530]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -18.5
+offset_right = 18.5
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Slot_Res/Slot_Res_Btn" unique_id=2034440658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Slot_Res/Slot_Res_Btn" unique_id=2139030853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Slot_Res/Slot_Res_Btn" unique_id=952559402]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 1.2650001
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 1.9619408
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv_BG" type="GridContainer" parent="Crafting_Panel" unique_id=1275161552]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.637
+anchor_right = 0.966
+anchor_bottom = 0.74
+offset_left = -0.05622387
+offset_top = -0.10722351
+offset_right = -33.476227
+offset_bottom = -3.689209
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Button1" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1475724052]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1559894465]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1700762301]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=2019357846]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1215119997]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button6" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1842373517]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1502393907]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button8" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=1287902996]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button9" type="Button" parent="Crafting_Panel/Inv_BG" unique_id=634852547]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Inv" type="GridContainer" parent="Crafting_Panel" unique_id=468276665]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.637
+anchor_right = 0.966
+anchor_bottom = 0.74
+offset_left = -0.05622387
+offset_top = -0.10722351
+offset_right = -33.476227
+offset_bottom = -3.689209
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Inv1" type="Button" parent="Crafting_Panel/Inv" unique_id=949601809]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv1" unique_id=901152747]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv1" unique_id=290978994]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv1" unique_id=482734962]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv2" type="Button" parent="Crafting_Panel/Inv" unique_id=403769081]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv2" unique_id=1451718947]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv2" unique_id=1473400986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv2" unique_id=1713256938]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv3" type="Button" parent="Crafting_Panel/Inv" unique_id=1613653389]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv3" unique_id=1411712620]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv3" unique_id=1838232613]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv3" unique_id=1626163202]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv4" type="Button" parent="Crafting_Panel/Inv" unique_id=2060006390]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv4" unique_id=522542821]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv4" unique_id=1369043005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv4" unique_id=982298647]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv5" type="Button" parent="Crafting_Panel/Inv" unique_id=872058803]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv5" unique_id=790744213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv5" unique_id=331853967]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv5" unique_id=1096959151]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv6" type="Button" parent="Crafting_Panel/Inv" unique_id=1003624476]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv6" unique_id=1293628674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv6" unique_id=182467509]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv6" unique_id=1282352293]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv7" type="Button" parent="Crafting_Panel/Inv" unique_id=996677894]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv7" unique_id=390618931]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv7" unique_id=1524435269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv7" unique_id=274112846]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv8" type="Button" parent="Crafting_Panel/Inv" unique_id=577555399]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv8" unique_id=1296459278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv8" unique_id=145790002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv8" unique_id=1527970956]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="Inv9" type="Button" parent="Crafting_Panel/Inv" unique_id=1300486980]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="Crafting_Panel/Inv/Inv9" unique_id=1902350352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="Crafting_Panel/Inv/Inv9" unique_id=433727791]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="Crafting_Panel/Inv/Inv9" unique_id=576788272]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar_Panel" type="Panel" parent="." unique_id=673165612]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34100002
+anchor_top = 0.93100005
+anchor_right = 0.669
+anchor_bottom = 1.0
+offset_left = -0.21728516
+offset_top = 0.068359375
+offset_right = -0.094055176
+offset_bottom = -1.0881958
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8pkca")
+
+[node name="HotBar_BG" type="GridContainer" parent="HotBar_Panel" unique_id=1432955672]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.97200006
+anchor_bottom = 0.934
+offset_right = -33.480286
+offset_bottom = -3.6807632
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Button1" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=775464279]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=809599283]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=1835005214]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=332156880]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=200757877]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button6" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=1049006268]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=1926586113]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button8" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=620605562]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="Button9" type="Button" parent="HotBar_Panel/HotBar_BG" unique_id=2128439429]
+layout_mode = 2
+icon = ExtResource("2_2246s")
+flat = true
+icon_alignment = 1
+
+[node name="HotBar" type="GridContainer" parent="HotBar_Panel" unique_id=1020117471]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.97200006
+anchor_bottom = 0.934
+offset_right = -33.480286
+offset_bottom = -3.6807632
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.1, 1.1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="HotBar1" type="Button" parent="HotBar_Panel/HotBar" unique_id=166405070]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar1" unique_id=1772011289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar1" unique_id=1579263726]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar1" unique_id=620152876]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar2" type="Button" parent="HotBar_Panel/HotBar" unique_id=805280465]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar2" unique_id=809108311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar2" unique_id=533598211]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar2" unique_id=339082656]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar3" type="Button" parent="HotBar_Panel/HotBar" unique_id=3329603]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar3" unique_id=1072539678]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar3" unique_id=952830126]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar3" unique_id=1232109176]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar4" type="Button" parent="HotBar_Panel/HotBar" unique_id=1559041644]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar4" unique_id=457372884]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar4" unique_id=709543121]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar4" unique_id=1277773203]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar5" type="Button" parent="HotBar_Panel/HotBar" unique_id=1336437336]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar5" unique_id=727141448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar5" unique_id=868618717]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar5" unique_id=684074822]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar6" type="Button" parent="HotBar_Panel/HotBar" unique_id=1361980504]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar6" unique_id=1793128474]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar6" unique_id=906142118]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar6" unique_id=447582298]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar7" type="Button" parent="HotBar_Panel/HotBar" unique_id=2116885299]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar7" unique_id=191679111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar7" unique_id=2055666361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar7" unique_id=912407342]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar8" type="Button" parent="HotBar_Panel/HotBar" unique_id=347809456]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar8" unique_id=1826599336]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar8" unique_id=2096436511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar8" unique_id=1568475428]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64
+
+[node name="HotBar9" type="Button" parent="HotBar_Panel/HotBar" unique_id=820163065]
+custom_minimum_size = Vector2(29, 29)
+layout_mode = 2
+icon = ExtResource("3_q7pk6")
+flat = true
+icon_alignment = 1
+
+[node name="Layer_Head" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar9" unique_id=712464013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layer_Handle" type="TextureRect" parent="HotBar_Panel/HotBar/HotBar9" unique_id=1261681906]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stack" type="Label" parent="HotBar_Panel/HotBar/HotBar9" unique_id=16991641]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.601
+anchor_top = 0.591
+anchor_right = 0.78400004
+anchor_bottom = 0.79700005
+offset_left = -0.0019283295
+offset_top = -0.00044441223
+offset_right = 42.07106
+offset_bottom = 19.277943
+scale = Vector2(0.13890527, 0.2834667)
+theme_override_font_sizes/font_size = 64

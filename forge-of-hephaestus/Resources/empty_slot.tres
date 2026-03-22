@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://qycias4ox7sf"]
+
+[ext_resource type="Script" uid="uid://i6mexmasr754" path="res://Resources/item_data.gd" id="1_di6p6"]
+[ext_resource type="Texture2D" uid="uid://df1ktnbwmet0n" path="res://Assets/H_Slot_empty.png" id="2_4gqqy"]
+
+[resource]
+script = ExtResource("1_di6p6")
+item_name = "empty_slot"
+single_texture = ExtResource("2_4gqqy")
+metadata/_custom_type_script = "uid://i6mexmasr754"

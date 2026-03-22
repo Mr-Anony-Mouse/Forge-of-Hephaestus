@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bmoaf7rem13is"]
+
+[ext_resource type="Script" uid="uid://i6mexmasr754" path="res://Resources/item_data.gd" id="1_08drw"]
+[ext_resource type="Texture2D" uid="uid://b6bptus846khr" path="res://Assets/axe_head_wood.png" id="2_amaqb"]
+
+[resource]
+script = ExtResource("1_08drw")
+item_name = "Wooden Axe Head"
+single_texture = ExtResource("2_amaqb")
+req_axe_head = "Wood"
+is_stackable = true
+stack_limit = 64
+metadata/_custom_type_script = "uid://i6mexmasr754"

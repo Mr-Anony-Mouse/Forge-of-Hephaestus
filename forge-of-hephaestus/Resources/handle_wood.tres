@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://deimot10u8ud6"]
+
+[ext_resource type="Script" uid="uid://i6mexmasr754" path="res://Resources/item_data.gd" id="1_alvcv"]
+[ext_resource type="Texture2D" uid="uid://bcfmwft0lnfk7" path="res://Assets/handle_wood.png" id="2_3s0so"]
+
+[resource]
+script = ExtResource("1_alvcv")
+item_name = "Wooden Handle"
+single_texture = ExtResource("2_3s0so")
+req_handle_slot = "Wood"
+is_stackable = true
+stack_limit = 64
+metadata/_custom_type_script = "uid://i6mexmasr754"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b8fnrwk3qpmln"]
+
+[ext_resource type="Script" uid="uid://i6mexmasr754" path="res://Resources/item_data.gd" id="1_0p0je"]
+[ext_resource type="Texture2D" uid="uid://bcfmwft0lnfk7" path="res://Assets/handle_wood.png" id="1_eadiu"]
+[ext_resource type="Texture2D" uid="uid://b6bptus846khr" path="res://Assets/axe_head_wood.png" id="2_q1nng"]
+
+[resource]
+script = ExtResource("1_0p0je")
+item_name = "Wooden Axe"
+is_tool = true
+head_texture = ExtResource("2_q1nng")
+handle_texture = ExtResource("1_eadiu")
+req_axe_head = "Wooden Axe Head"
+req_handle_slot = "Wooden Handle"
+damage = 10.0
+durability = 50.0
+metadata/_custom_type_script = "uid://i6mexmasr754"
