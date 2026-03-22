@@ -1,0 +1,307 @@
+[gd_scene format=3 uid="uid://h48bl1lqb3l0"]
+
+[ext_resource type="Texture2D" uid="uid://dbmb6qt2d8n3k" path="res://Assets/H_Crafting.png" id="1_8rq6k"]
+[ext_resource type="Texture2D" uid="uid://nwsis0cw6ugx" path="res://Assets/H_Slot.png" id="2_67568"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8rq6k"]
+texture = ExtResource("1_8rq6k")
+
+[node name="Crafting" type="Control" unique_id=722658264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1225818869]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.0
+offset_top = -197.0
+offset_right = 197.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8rq6k")
+
+[node name="Slot_Head" type="Button" parent="Panel" unique_id=296880136]
+layout_mode = 0
+offset_left = 96.96875
+offset_top = 66.19133
+offset_right = 132.35938
+offset_bottom = 101.58977
+flat = true
+
+[node name="Slot_Head2" type="Button" parent="Panel" unique_id=666088771]
+layout_mode = 0
+offset_left = 96.96875
+offset_top = 123.15697
+offset_right = 132.35938
+offset_bottom = 158.5554
+flat = true
+
+[node name="Slot_Head3" type="Button" parent="Panel" unique_id=1541398252]
+layout_mode = 0
+offset_left = 267.8145
+offset_top = 95.42781
+offset_right = 303.20514
+offset_bottom = 130.82625
+flat = true
+
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=2066598523]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.637
+anchor_right = 0.966
+anchor_bottom = 0.84300005
+offset_left = -0.05622387
+offset_top = -0.10722351
+offset_right = -33.476227
+offset_bottom = -7.27124
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Button1" type="Button" parent="Panel/GridContainer" unique_id=857882659]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Panel/GridContainer" unique_id=455248388]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="Panel/GridContainer" unique_id=1360655527]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="Panel/GridContainer" unique_id=1291109618]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="Panel/GridContainer" unique_id=663465816]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button6" type="Button" parent="Panel/GridContainer" unique_id=656774518]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="Panel/GridContainer" unique_id=6215698]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button8" type="Button" parent="Panel/GridContainer" unique_id=635755117]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button9" type="Button" parent="Panel/GridContainer" unique_id=852060701]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button10" type="Button" parent="Panel/GridContainer" unique_id=1133633086]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button11" type="Button" parent="Panel/GridContainer" unique_id=1683086964]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button12" type="Button" parent="Panel/GridContainer" unique_id=1079745108]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button13" type="Button" parent="Panel/GridContainer" unique_id=1356286610]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button14" type="Button" parent="Panel/GridContainer" unique_id=856671926]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button15" type="Button" parent="Panel/GridContainer" unique_id=1969170502]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button16" type="Button" parent="Panel/GridContainer" unique_id=1923501258]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button17" type="Button" parent="Panel/GridContainer" unique_id=746824423]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button18" type="Button" parent="Panel/GridContainer" unique_id=1502896288]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="Panel" unique_id=750532637]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.036000002
+anchor_top = 0.637
+anchor_right = 0.966
+anchor_bottom = 0.84300005
+offset_left = -0.05622387
+offset_top = -0.10722351
+offset_right = -33.476227
+offset_bottom = -7.27124
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Button1" type="Button" parent="Panel/GridContainer2" unique_id=119751931]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Panel/GridContainer2" unique_id=365998942]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="Panel/GridContainer2" unique_id=1148130032]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="Panel/GridContainer2" unique_id=458398639]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="Panel/GridContainer2" unique_id=1333580417]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button6" type="Button" parent="Panel/GridContainer2" unique_id=672307259]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="Panel/GridContainer2" unique_id=1698568495]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button8" type="Button" parent="Panel/GridContainer2" unique_id=1988059021]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button9" type="Button" parent="Panel/GridContainer2" unique_id=844473390]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button10" type="Button" parent="Panel/GridContainer2" unique_id=1486775825]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button11" type="Button" parent="Panel/GridContainer2" unique_id=888242881]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button12" type="Button" parent="Panel/GridContainer2" unique_id=781145188]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button13" type="Button" parent="Panel/GridContainer2" unique_id=1768020594]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button14" type="Button" parent="Panel/GridContainer2" unique_id=1677722682]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button15" type="Button" parent="Panel/GridContainer2" unique_id=1127969038]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button16" type="Button" parent="Panel/GridContainer2" unique_id=157993058]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button17" type="Button" parent="Panel/GridContainer2" unique_id=807888756]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
+
+[node name="Button18" type="Button" parent="Panel/GridContainer2" unique_id=2093184217]
+layout_mode = 2
+icon = ExtResource("2_67568")
+flat = true
+icon_alignment = 1
